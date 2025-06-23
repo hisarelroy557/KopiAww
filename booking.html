@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KopiAww - Booking</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: url('image/tuang-coffee.webp') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px 0;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #d4af7f;
+    }
+    .booking-section {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 60px 20px;
+      border-radius: 15px;
+      max-width: 600px;
+      margin: 40px auto;
+    }
+    .booking-section h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      color: #ffd6a5;
+      margin-bottom: 30px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input, textarea, select {
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #d4af7f;
+      color: #000;
+      padding: 12px;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #fff;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.7);
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>KopiAww</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">Tentang</a></li>
+          <li><a href="booking.html" class="active">Booking</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="booking-section">
+    <h2>Formulir Booking Meja </h2>
+    
+        <form action="https://formspree.io/f/mkgbnjlo" method="POST">
+      <input type="text" name="nama" placeholder="Nama Lengkap" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="telepon" placeholder="Nomor Telepon" required>
+      <input type="date" name="tanggal" required>
+      <input type="time" name="waktu" required>
+      <select name="jumlah">
+        <option value="1">1 Orang</option>
+        <option value="2">2 Orang</option>
+        <option value="3">3 Orang</option>
+        <option value="4">4 Orang</option>
+        <option value="5">5 Orang</option>
+        <option value="6">6+ Orang</option>
+      </select>
+      <textarea name="pesan" placeholder="Catatan Tambahan"></textarea>
+      <button type="submit">Kirim Booking</button>
+    </form>
+  </section>
+
+  
+</body>
+</html>
